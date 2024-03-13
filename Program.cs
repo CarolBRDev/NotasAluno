@@ -11,17 +11,17 @@ namespace NotasAluno
             Console.WriteLine("Digite o nome do aluno: ");
             string nomeAluno = Console.ReadLine();
             Console.WriteLine("Digite a nota do primeiro trimestre (0 a 100 pontos): ");
-            double nota1 = double.Parse(Console.ReadLine());
+            int nota1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Digite a nota do segundo trimestre (0 a 100 pontos): ");
-            double nota2 = double.Parse(Console.ReadLine());
+            int nota2 = int.Parse(Console.ReadLine());
             Console.WriteLine("Digite a nota do terceiro trimestre (0 a 100 pontos): ");
-            double nota3 = double.Parse(Console.ReadLine());
+            int nota3 = int.Parse(Console.ReadLine());
 
             int peso1 = 30;
             int peso2 = 35;
             int peso3 = 35;
 
-            double notaFinal = (nota1 * peso1 + nota2 * peso2 + nota3 * peso3) / (peso1 + peso2 + peso3);
+            int notaFinal = (nota1 * peso1 + nota2 * peso2 + nota3 * peso3) / (peso1 + peso2 + peso3);
             
             if (notaFinal >= 60)
             {
@@ -29,7 +29,7 @@ namespace NotasAluno
             }
             else
             {
-                double pontosFaltantes = 60 - notaFinal;
+                int pontosFaltantes = 60 - notaFinal;
                 Console.WriteLine($" A nota final do(a) aluno(a) {nomeAluno} é: {notaFinal}. O(A) aluno(a) foi REPROVADO(A). Pontos faltantes para alcançar a média mínima para aprovação: {pontosFaltantes} ");
                
             }
